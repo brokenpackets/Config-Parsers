@@ -21,7 +21,7 @@ Uses Arista eAPI to collect this information.
 def main():
 
   #SESSION SETUP FOR eAPI TO DEVICE
-  url = "https://%s:%s@%s/command-api" % (user, passwd, ip)
+  url = "https://%s:%s@%s/command-api" % (user, passwd, switchIP)
   ss = Server(url)
   permit_regex = re.compile('seq ([0-9]{1,6}) permit.*')
   deny_regex = re.compile('seq ([0-9]{1,6}) deny.*')
